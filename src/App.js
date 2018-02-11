@@ -1,26 +1,33 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import web3 from './web3.js';
+import lottery from './lottery.js';
 
 class App extends Component {
+
+  constructor(props){
+    super(props)
+    this.state = { manager : ''};
+  }
+
+  async componentDidMount(){
+    const manager = await lottery.methods.manager().call();
+    this.setState({manager});
+  }
+
   render() {
-    web3.eth.getAccounts().then(accounts => {
-      console.log(accounts);
-    })
-    // console.log();
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div style={{justifyContent : 'center',alignItems : 'center',flex : 1}}>
+        <h2 style={{alignSelf : 'center'}}>Lottery Contract Game</h2>
+        <p>this Contract is managed by {this.state.manager} address!!!</p>
       </div>
     );
   }
 }
+
+const styles =   {
+  AppHeader : {
+    backgroundColor : '#252525'
+  }
+}
+
 
 export default App;
