@@ -1,28 +1,59 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
 .App {
-  text-align: center;
+  font-family: 'Rubik', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Header{
+  background-color:#252525;
+  padding: 15px;
+  margin: 0 auto;
+  color : #ffffff;
+  flex-direction: row;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.Address{
+  text-decoration: underline;
 }
 
-.App-title {
-  font-size: 1.5em;
+.HeaderTitle{
+  width: 100%;
+  text-align: left;
 }
 
-.App-intro {
-  font-size: large;
+.HeaderButtons{
+  width: 80%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.buttonFace{
+  background-color: #eee;
+  font-weight: 100;
+  padding: 5px;
+}
+
+button{
+  margin: 5px;
+  background-color: #eee;
+  color : #252525;
+  font-weight: 100;
+  border: none;
+  border-radius: 2px;
+  padding: 5px;
+  font-size: 10px;
+}
+
+a{
+  color : #252525
+}
+.messgae{
+  color: rgba(18, 138, 218, 0.972);
+  text-decoration: underline;
+}
+
+.winner-message{
+  color : #20e24a;
+  text-decoration: underline;
+}
+li{
+  margin:5px;
 }
