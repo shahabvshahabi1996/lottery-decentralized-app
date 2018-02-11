@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import web3 from './web3.js';
 
 class App extends Component {
   render() {
+    web3.eth.getAccounts().then(accounts => {
+      console.log(accounts);
+    })
+    // console.log();
     return (
       <div className="App">
         <header className="App-header">
